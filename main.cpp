@@ -5,6 +5,8 @@
 
 #include "random.h"
 
+#define SWITCH true
+
 int main() {
 
     Moderator mod;
@@ -12,8 +14,6 @@ int main() {
 
     mod.shuffleDoors();
     int firstDoor = mod.showFirstDoor();
-
-    std::cout << "Door #" << firstDoor + 1 << " contains: " << mod.showDoor(firstDoor) << "\n";
 
     // select for the first time
     // it does not matter which of the two closed doors is selected here
@@ -28,19 +28,17 @@ int main() {
     }
 
     // switch or no switch?
-    bool switchDoor = true;
+    bool switchDoor = SWITCH;
     if (switchDoor) {
-        //participant.changeFocus(2);
+        participant.switchDoor(firstDoor);
     }
 
     if (mod.showDoor(participant.getFocusedDoor()) == "goat") {
-            std::cout << "Moderator won\n";
-            participant.setFails(participant.getFailCounter() + 1);
-        }
+        participant.setFails(participant.getFailCounter() + 1);
+    }
     else {
-            std::cout << "Participant won\n";
-            participant.setWins(participant.getWinCounter() + 1);
-        }
+        participant.setWins(participant.getWinCounter() + 1);
+    }
 
     mod.clearDoors();
 

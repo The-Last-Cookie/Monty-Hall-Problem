@@ -10,8 +10,32 @@ Participant::~Participant() {
 
 }
 
-void Participant::switchDoor() {
+void Participant::switchDoor(int firstDoor) {
+	
+	if (firstDoor == 0) {
+		if (this->focusedDoor == 1) {
+			this->focusedDoor = 2;
+			return;
+		}
 
+		this->focusedDoor = 1;
+	}
+	else if (firstDoor == 2) {
+		if (this->focusedDoor == 0) {
+			this->focusedDoor = 1;
+			return;
+		}
+
+		this->focusedDoor = 0;
+	}
+	else {
+		if (this->focusedDoor == 0) {
+			this->focusedDoor = 2;
+			return;
+		}
+
+		this->focusedDoor = 0;
+	}
 }
 
 int Participant::getFocusedDoor() {

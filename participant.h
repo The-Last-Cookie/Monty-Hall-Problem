@@ -6,7 +6,7 @@ class Participant {
 	public:
 		Participant();
 		~Participant();
-		void switchDoor();
+		void switchDoor(int firstDoor);
 		int getFocusedDoor();
 		void changeFocus(int number);
 
