@@ -2,6 +2,8 @@
 
 Participant::Participant() {
 	this->focusedDoor = 0;
+	this->wins = 0;
+	this->fails = 0;
 }
 
 Participant::~Participant() {
@@ -18,4 +20,20 @@ int Participant::getFocusedDoor() {
 
 void Participant::changeFocus(int number) {
 	this->focusedDoor = number;
+}
+
+int Participant::getWinCounter() {
+	return this->wins;
+}
+
+void Participant::setWins(int number) {
+	this->wins = number;
+}
+
+int Participant::getFailCounter() {
+	return this->fails;
+}
+
+void Participant::setFails(int number) {
+	this->fails = number;
 }

@@ -1,6 +1,5 @@
 #include <iostream>
 
-#include "countermanager.h"
 #include "moderator.h"
 #include "participant.h"
 
@@ -8,7 +7,6 @@
 
 int main() {
 
-    CounterManager counterMan;
     Moderator mod;
     Participant participant;
 
@@ -30,10 +28,10 @@ int main() {
 
     if(mod.showDoor(participant.getFocusedDoor()) == "goat") {
         std::cout << "Moderator won\n";
-        counterMan.setFails(counterMan.getFailCounter() + 1);
+        participant.setFails(participant.getFailCounter() + 1);
     } else {
         std::cout << "Participant won\n";
-        counterMan.setWins(counterMan.getWinCounter() + 1);
+        participant.setWins(participant.getWinCounter() + 1);
     }
 
     mod.clearDoors();
