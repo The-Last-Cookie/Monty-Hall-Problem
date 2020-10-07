@@ -12,6 +12,7 @@ class Moderator {
 		void shuffleDoors();
 		int showFirstDoor();
 		std::string showDoor(int number);
+		void clearDoors();
 
 	private:
 		std::vector<Door> doors;

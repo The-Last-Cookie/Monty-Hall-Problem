@@ -44,6 +44,10 @@ void Moderator::shuffleDoors() {
     }
 }
 
+void Moderator::clearDoors() {
+    this->doors.clear();
+}
+
 int Moderator::showFirstDoor() {
     if (doors.at(0).getContent() == "money") {
         return Random::randInt(1, 2);
