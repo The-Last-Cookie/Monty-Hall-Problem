@@ -8,4 +8,5 @@ class Random {
 		Random();
 		~Random();
 		static int randInt(int min, int max);
+		static int choice(int a, int b);
 };

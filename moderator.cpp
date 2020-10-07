@@ -54,8 +54,7 @@ int Moderator::showFirstDoor() {
     } else if (doors.at(2).getContent() == "money") {
         return Random::randInt(0, 1);
     } else {
-        // TODO: return either 0 or 2
-        return 2;
+        return Random::choice(0, 2);
     }
 }
 

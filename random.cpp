@@ -38,3 +38,13 @@ int Random::randInt(int min, int max) {
 
     return n % (max) + min;
 }
+
+int Random::choice(int a, int b) {
+    int rand = randInt(0, 1);
+
+    if (rand == 0) {
+        return a;
+    }
+
+    return b;
+}

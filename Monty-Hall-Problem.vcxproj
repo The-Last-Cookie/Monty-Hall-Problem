@@ -139,7 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="countermanager.cpp" />
     <ClCompile Include="door.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="moderator.cpp" />
@@ -147,7 +146,6 @@
     <ClCompile Include="random.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="countermanager.h" />
     <ClInclude Include="door.h" />
     <ClInclude Include="moderator.h" />
     <ClInclude Include="participant.h" />
