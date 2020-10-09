@@ -5,7 +5,7 @@
 
 #include "random.h"
 
-#define SWITCH true
+#define SWITCH false
 
 int main() {
 
@@ -13,7 +13,11 @@ int main() {
     Participant participant;
 
     mod.shuffleDoors();
-    int firstDoor = mod.showFirstDoor();
+
+    // Participant chooses a door
+    participant.changeFocus(Random::randInt(1, 3));
+
+    int firstDoor = mod.showFirstDoor(participant.getFocusedDoor());
 
     // select for the first time
     // it does not matter which of the two closed doors is selected here
