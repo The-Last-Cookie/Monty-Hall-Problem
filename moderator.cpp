@@ -9,9 +9,9 @@ Moderator::~Moderator() {
 
 }
 
-// rearrange the win randomly
+// rearrange the doors randomly
 void Moderator::shuffleDoors() {
-    // get int between 1 and 3
+
     int rand = Random::randInt(1, 3);
 
     Door d1;

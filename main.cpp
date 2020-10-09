@@ -14,11 +14,10 @@ int main() {
 
     Moderator mod;
     Participant participant;
-
-    mod.shuffleDoors();
     
     for (int i = 0; i < GAMES; i++) {
 
+        mod.shuffleDoors();
         int firstDoor = mod.showFirstDoor();
 
         // select for the first time
