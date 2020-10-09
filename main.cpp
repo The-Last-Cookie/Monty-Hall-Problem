@@ -13,11 +13,7 @@ int main() {
     Participant participant;
 
     mod.shuffleDoors();
-
-    // Participant chooses a door
-    participant.changeFocus(Random::randInt(1, 3));
-
-    int firstDoor = mod.showFirstDoor(participant.getFocusedDoor());
+    int firstDoor = mod.showFirstDoor();
 
     // select for the first time
     // it does not matter which of the two closed doors is selected here

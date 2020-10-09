@@ -48,29 +48,15 @@ void Moderator::clearDoors() {
     this->doors.clear();
 }
 
-int Moderator::showFirstDoor(int focusedDoor) {
-    
-    switch (focusedDoor) {
-    case 0:
-        return 0;
-        break;
+int Moderator::showFirstDoor() {
 
-    case 1:
-        return 0;
-        break;
-
-    case 2:
-        return 0;
-        break;
-    }
-
-    /*if (doors.at(0).getContent() == "money") {
+    if (doors.at(0).getContent() == "money") {
         return Random::randInt(1, 2);
     } else if (doors.at(2).getContent() == "money") {
         return Random::randInt(0, 1);
     } else {
         return Random::choice(0, 2);
-    }*/
+    }
 }
 
 std::string Moderator::showDoor(int number) {
