@@ -2,7 +2,6 @@
 
 #include "moderator.h"
 #include "participant.h"
-
 #include "random.h"
 
 #define SWITCH false
@@ -46,7 +45,12 @@ int main() {
         }
 
         mod.clearDoors();
+    }
 
+    if (SWITCH) {
+        std::cout << "The participant switched the door.\n";
+    } else {
+        std::cout << "The participant didn't switch the door.\n";
     }
 
     std::cout << "The participant won: " << participant.getWinCounter()

@@ -9,7 +9,6 @@ class Door {
 		void setContent(std::string content);
 		std::string getContent();
 		std::string openDoor();
-		bool getStatus();
 
 	private:
 		std::string content;

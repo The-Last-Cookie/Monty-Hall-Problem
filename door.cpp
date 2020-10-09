@@ -18,10 +18,5 @@ std::string Door::getContent() {
 }
 
 std::string Door::openDoor() {
-	this->open = true;
 	return this->content;
-}
-
-bool Door::getStatus() {
-	return this->open;
 }
