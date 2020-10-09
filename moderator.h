@@ -10,7 +10,7 @@ class Moderator {
 		Moderator();
 		~Moderator();
 		void shuffleDoors();
-		int showFirstDoor();
+		int showFirstDoor(int focusedDoor);
 		std::string showDoor(int number);
 		void clearDoors();
 
