@@ -8,7 +8,7 @@
 #define SWITCH false
 
 // number of games played
-#define GAMES 10000
+#define GAMES 100000
 
 int main() {
 
@@ -49,8 +49,10 @@ int main() {
 
     }
 
-    std::cout << "Wins: " << participant.getWinCounter() << "\n";
-    std::cout << "Fails: " << participant.getFailCounter() << "\n";
+    std::cout << "The participant won: " << participant.getWinCounter()
+        << (participant.getWinCounter() == 1 ? " time.\n" : " times.\n");
+    std::cout << "The participant failed: " << participant.getFailCounter()
+        << (participant.getFailCounter() == 1 ? " time.\n" : " times.\n");
 
     system("pause");
     return 0;
